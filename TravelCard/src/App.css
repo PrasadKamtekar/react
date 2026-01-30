@@ -1,0 +1,54 @@
+* {
+  font-family: 'Poppins', sans-serif;
+
+  margin: 0;
+  padding: 0;
+  color:black;
+}
+body {
+  margin: 10px;
+}
+
+
+.card-container {
+   width: 240px;
+   height: 300px;
+   background-color: aqua;
+
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+
+   border-radius: 10%;
+   
+}
+
+.tourInfo {
+   
+   padding-left: 15px;
+   padding-bottom: 10px; 
+}
+
+.tourInfo h1 {
+  font-size: 16px;
+ 
+  padding-bottom: 5px ;
+}
+
+.tourInfo h3 {
+  font-size: 13px;
+
+}
+
+.btn .explore{
+background-color: rgba(255, 255, 255, 0.25);
+width: 100%;
+border: none;
+height: 35px;
+border-radius: 10px;
+
+text-align: left;
+padding-left: 15px;
+font-size: 15px;
+}
