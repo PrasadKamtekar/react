@@ -11,7 +11,7 @@ function App() {
              setCounter(counter + 1);  
       }} >increase</button>
       <button onClick={() => {
-         setCounter(counter + 1);
+        if (counter > 0){setCounter(counter - 1);} 
       }}>decrease</button>
     </div>
   )
