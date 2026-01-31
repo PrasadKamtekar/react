@@ -1,0 +1,24 @@
+
+.box {
+ 
+  width: 300px;
+  height: 300px;
+
+}
+.box button {
+  width: 100px;
+  background-color: rgb(146, 145, 145);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 18px;
+}
+
+.box h1{
+    background-color: gainsboro;
+    border-radius: 10px;
+    font-size: 100px;
+    margin: 10px;
+    width: 90px;
+    padding: 40px 75px 40px 75px;
+}
