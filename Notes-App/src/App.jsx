@@ -14,13 +14,17 @@ function App() {
     copyArr.push({ titles: `${title}`, details: `${detail}` });
     setArr(copyArr);
     console.log(title, detail);
-    setDetail('');
-    setTitle('');
+
     console.log(arr)
   }
 
-  const deleteNote = ()=> {
-      console.log("delete click");
+  const deleteNote = ({id})=> {
+         console.log(id);
+         console.log(arr)
+         const copyArr = [...arr];
+         copyArr.splice(id,1);
+         setArr(copyArr);
+         
   }
 
 
@@ -54,11 +58,11 @@ function App() {
           
             <div className="recent">
               {arr.map((notes, idx) => {
-                return (<div className="recent-container" key={idx}>
+                return (<div className="recent-container" >
                     <>
                       <h1>{notes.titles}</h1>
                       <p>{notes.details}</p>
-                      <button key={idx} onClick={deleteNote()}>Delete</button>
+                      <button  key={idx} onClick={deleteNote}>Delete</button>
                     </>
                 </div>)
               })}
