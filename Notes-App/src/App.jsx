@@ -10,8 +10,17 @@ function App() {
   const [arr, setArr] = useState([]);
 
   const insert = () => {
-    setArr(p => [...p, [title, detail]]);
-    console.log(title, detail)
+    const copyArr = [...arr];
+    copyArr.push({ titles: `${title}`, details: `${detail}` });
+    setArr(copyArr);
+    console.log(title, detail);
+    setDetail('');
+    setTitle('');
+    console.log(arr)
+  }
+
+  const deleteNote = ()=> {
+      console.log("delete click");
   }
 
 
@@ -42,20 +51,18 @@ function App() {
 
         <div className='recent-c'>
           <h1>Recent Notes</h1>
-          <div className="recent">
-            {arr.map((row, i) => (
-              <div key={i} >
-                {row.map((item, j) => (
-                  <div key={j} className="recent-container">
-                    <h1>{item.title}</h1>
-                    <p>{item.detail}</p>
-                    <button>Delete</button>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-
+          
+            <div className="recent">
+              {arr.map((notes, idx) => {
+                return (<div className="recent-container" key={idx}>
+                    <>
+                      <h1>{notes.titles}</h1>
+                      <p>{notes.details}</p>
+                      <button key={idx} onClick={deleteNote()}>Delete</button>
+                    </>
+                </div>)
+              })}
+            </div>
         </div>
 
       </div>
