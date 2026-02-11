@@ -86,24 +86,31 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 /* Title */
 .recent-container h1 {
   font-size: 16px;
   margin-bottom: 8px;
+  color: #5a4a5c;
+
+  overflow-wrap: break-word;
   word-wrap: break-word;
-  color: #5a4a5c; /* darker rose taupe tone */
+  word-break: break-word;
 }
 
 /* Detail */
 .recent-container p {
   font-size: 13px;
   flex-grow: 1;
-  overflow-y: auto;
-  word-wrap: break-word;
   margin-bottom: 10px;
   color: #333;
+  overflow-y: auto;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Delete Button */

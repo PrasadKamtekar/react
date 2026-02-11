@@ -1,18 +1,27 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 function App() {
 
   const [title, setTitle] = useState("");
+  
 
   const [detail, setDetail] = useState('');
-  const [arr, setArr] = useState([]);
+  const [arr, setArr] = useState(()=> {
+    const data = localStorage.getItem("notes");
+    return data ? JSON.parse(data) : [];
+  });
+  
+  useEffect(()=> {
+    localStorage.setItem("notes" , JSON.stringify(arr));
+  }, [arr]);
 
   const insert = () => {
     const copyArr = [...arr];
     copyArr.push({ titles: `${title}`, details: `${detail}` });
     setArr(copyArr);
+    
   }
 
   const deleteNote = (idx)=> {
