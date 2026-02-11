@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
 
   const [detail, setDetail] = useState('');
   const [arr, setArr] = useState([]);
@@ -13,20 +13,13 @@ function App() {
     const copyArr = [...arr];
     copyArr.push({ titles: `${title}`, details: `${detail}` });
     setArr(copyArr);
-    console.log(title, detail);
-
-    console.log(arr)
   }
 
-  const deleteNote = ({id})=> {
-         console.log(id);
-         console.log(arr)
+  const deleteNote = (idx)=> {
          const copyArr = [...arr];
-         copyArr.splice(id,1);
-         setArr(copyArr);
-         
+         copyArr.splice(idx,1);
+         setArr(copyArr);   
   }
-
 
   return (
     <>
@@ -58,11 +51,11 @@ function App() {
           
             <div className="recent">
               {arr.map((notes, idx) => {
-                return (<div className="recent-container" >
+                return (<div className="recent-container" key={idx}>
                     <>
                       <h1>{notes.titles}</h1>
                       <p>{notes.details}</p>
-                      <button  key={idx} onClick={deleteNote}>Delete</button>
+                      <button   onClick={()=> deleteNote(idx)}>Delete</button>
                     </>
                 </div>)
               })}
