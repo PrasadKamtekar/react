@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f9f3e9; /* soft vanilla background */
+  background-color: #eaf4ff; /* light vista blue background */
 }
 
 /* Main Layout */
@@ -19,7 +19,7 @@ body {
 /* Input Section */
 .input-container {
   width: 40%;
-  background-color: #796878; /* Rose Taupe */
+  background-color: #7aa9ff; /* Vista Blue */
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -49,8 +49,8 @@ body {
   padding: 10px;
   border-radius: 6px;
   border: none;
-  background-color: #f3e5ab; /* Vanilla */
-  color: #333;
+  background-color: #bfff00; /* Mindaro */
+  color: black;
   cursor: pointer;
   font-weight: bold;
 }
@@ -66,7 +66,7 @@ body {
 
 .recent-c h1 {
   margin-bottom: 20px;
-  color: #444;
+  color: #333;
 }
 
 /* Notes Grid */
@@ -78,7 +78,7 @@ body {
 
 /* Note Card */
 .recent-container {
-  background-color: #f3e5ab; /* Vanilla */
+  background-color: #bfff00; /* Mindaro */
   width: 190px;
   min-height: 210px;
   padding: 15px;
@@ -86,31 +86,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 /* Title */
 .recent-container h1 {
   font-size: 16px;
   margin-bottom: 8px;
-  color: #5a4a5c;
-
-  overflow-wrap: break-word;
   word-wrap: break-word;
-  word-break: break-word;
 }
 
 /* Detail */
 .recent-container p {
   font-size: 13px;
   flex-grow: 1;
-  margin-bottom: 10px;
-  color: #333;
   overflow-y: auto;
-
-  overflow-wrap: break-word;
   word-wrap: break-word;
-  word-break: break-word;
+  margin-bottom: 10px;
 }
 
 /* Delete Button */
@@ -118,7 +109,7 @@ body {
   padding: 6px;
   border: none;
   border-radius: 6px;
-  background-color: #c45a6b; /* soft rose tone */
+  background-color: #ff4d4d; /* soft red */
   color: white;
   cursor: pointer;
   font-size: 13px;
