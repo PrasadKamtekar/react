@@ -3,11 +3,10 @@ import React, { useState } from 'react'
 function App() {
 
   const [data, setData] = useState({ userName: "Prasad", age: 21 });
-  const [arr, setArr] = useState([10, 20, 30]);
+  const [arr, setArr] = useState([]);
   const [num, setNum] = useState(0);
 
   const passData = () => {
-
     const newData = { ...data };
     newData.userName = "Saiprasad";
     setData(newData);
@@ -27,7 +26,7 @@ function App() {
       <h1>{arr}</h1>
       <button onClick={() => {
         const newArr = [...arr];
-        newArr.push(90);
+        newArr.push(" he ",90);
         setArr(newArr);
       }}>change Array</button>
 
